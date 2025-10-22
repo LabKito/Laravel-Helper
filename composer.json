@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LabKito\\LaravelHelper\\LaravelHelpersServiceProvider"
+                "LabKito\\LaravelHelper\\LaravelHelperServiceProvider"
             ]
         }
     },
