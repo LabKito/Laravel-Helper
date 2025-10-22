@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\MyPackage\Console;
+namespace LabKito\LaravelHelper\Console;
 
 use Illuminate\Console\Command;
 
