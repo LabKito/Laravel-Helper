@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 
 if (! function_exists('datatable')) {
-    function datatable($model, Request $request, $searchColumn = [], $mapResponse = null)
+    function datatable($model, Request $request, $searchColumn = [], $mapResponse = null, $encryption = true)
     {
         $query = $model;
 
@@ -41,6 +41,6 @@ if (! function_exists('datatable')) {
 
         $data = $request->rows ? $response : ['data' => $response];
 
-        return encryption($data);
+        return $encryption = true ? encryption($data) : $data;
     }
 }
