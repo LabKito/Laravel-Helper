@@ -1,0 +1,32 @@
+{
+    "name": "laravel/laravel-helper",
+    "description": "A collection of Laravel helper functions (datatable, etc.)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dendi",
+            "email": "mdendi6@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "illuminate/support": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LabKito\\LaravelHelper\\": "src/"
+        },
+        "files": [
+            "src/Helpers/datatable.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LabKito\\LaravelHelper\\LaravelHelpersServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
