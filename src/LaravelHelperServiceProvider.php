@@ -1,4 +1,5 @@
 <?php
+
 namespace LabKito\LaravelHelper;
 
 use Illuminate\Support\ServiceProvider;

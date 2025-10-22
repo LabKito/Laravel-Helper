@@ -1,6 +1,6 @@
 <?php
 
-namespace LabKito\LaravelHelper\Console;
+namespace Labkito\LaravelHelper\Console;
 
 use Illuminate\Console\Command;
 
@@ -12,15 +12,17 @@ class InstallCommand extends Command
     public function handle()
     {
         $this->info('Installing package dependencies via Composer...');
-        // $this->runShellCommand('composer require @inertiajs/inertia-laravel');
+        $this->runShellCommand('composer require @inertiajs/inertia-laravel');
 
         $this->info('Installing frontend dependencies via npm...');
-        // $this->runShellCommand('npm install @inertiajs/inertia @inertiajs/inertia-vue3 vue@3');
+        $this->runShellCommand('npm install typescript tailwind-merge @inertiajs/react @types/react react react-dom @types/react @types/react-dom');
 
-        $this->info('Installing custom package frontend assets...');
+        $this->info('Installing labkito frontend assets...');
         // $this->runShellCommand('npm install your-custom-package');
+
         $this->info('Publishing package assets...');
         // $this->call('vendor:publish', ['--tag' => 'mypackage-js']);
+
         $this->info('Installation complete!');
     }
 
