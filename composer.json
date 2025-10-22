@@ -1,5 +1,5 @@
 {
-    "name": "LabKito/laravel-helper",
+    "name": "labkito/laravel-helper",
     "description": "A collection of Laravel helper functions (datatable, etc.)",
     "type": "library",
     "license": "MIT",
