@@ -14,9 +14,11 @@ class InstallCommand extends Command
         $this->info('Installing package dependencies via Composer...');
         $this->runShellCommand('composer require @inertiajs/inertia-laravel');
 
-        $this->info('Installing frontend dependencies via npm...');
-        $this->runShellCommand('npm install typescript tailwind-merge @inertiajs/react @types/react react react-dom @types/react @types/react-dom');
-
+        $this->info('Installing frontend npm dependencies...');
+        $this->runShellCommand(
+            'npm install typescript react react-dom @types/react @types/react-dom @inertiajs/react tailwind-merge clsx tailwindcss @tailwindcss/vite tailwindcss-animate lucide-react @vitejs/plugin-react'
+        );
+        
         $this->info('Installing labkito frontend assets...');
         // $this->runShellCommand('npm install your-custom-package');
 
