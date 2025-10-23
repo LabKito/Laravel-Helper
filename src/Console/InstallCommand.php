@@ -16,7 +16,8 @@ class InstallCommand extends Command
         $this->runShellCommand('composer require laravel/wayfinder laravel/fortify');
 
         $this->info('copy all utils from package to projects');
-        $this->runShellCommand('cp -r ' . __DIR__ . '/../utils/* ' . base_path() .'');
+        $this->runShellCommand('rm ' . base_path() . '/vite.config.js');
+        $this->runShellCommand('cp -r ' . __DIR__ . '/../Utils/* ' . base_path() .'');
 
         $this->info('Installing frontend npm dependencies...');
         $this->runShellCommand('npm install');
@@ -25,7 +26,7 @@ class InstallCommand extends Command
         // $this->runShellCommand('npm install your-custom-package');
 
         $this->info('Publishing package assets...');
-        // $this->call('vendor:publish', ['--tag' => 'mypackage-js']);
+        // $this->call('vendor:publish', ['--tag' => 'labkito-frontend']);
 
         $this->info('Installation complete!');
     }
