@@ -17,6 +17,10 @@ class LaravelHelperServiceProvider extends ServiceProvider
                 \LabKito\LaravelHelper\Console\InstallCommand::class,
             ]);
 
+            $this->publishes([
+                __DIR__.'/utils' => base_path(),
+            ], 'utils');
+
             // $this->publishes([
             //     __DIR__.'/../resources/js' => resource_path('vendor/mypackage'),
             // ], 'mypackage-js');
