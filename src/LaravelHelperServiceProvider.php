@@ -17,9 +17,9 @@ class LaravelHelperServiceProvider extends ServiceProvider
                 \LabKito\LaravelHelper\Console\InstallCommand::class,
             ]);
 
-            // $this->publishes([
-            //     __DIR__.'/../Resources' => resource_path('resources'),
-            // ], 'labkito-frontend');
+            $this->publishes([
+                __DIR__.'/Resources' => resource_path(),
+            ], 'labkito-frontend');
         }
     }
 

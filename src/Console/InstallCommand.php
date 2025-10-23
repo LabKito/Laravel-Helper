@@ -26,7 +26,7 @@ class InstallCommand extends Command
         // $this->runShellCommand('npm install your-custom-package');
 
         $this->info('Publishing package assets...');
-        // $this->call('vendor:publish', ['--tag' => 'labkito-frontend']);
+        $this->call('vendor:publish', ['--tag' => 'labkito-frontend']);
 
         $this->info('Installation complete!');
     }
