@@ -9,6 +9,12 @@ You can install the package via Composer:
 composer require labkito/laravel-helper
 ```
 
+## Generate Template 
+To generate the necessary template files, run the following Artisan command:
+```bash
+php artisan labkito-helper:install
+```
+
 ## Documentation
 ### Datatable 
 The `datatable()` helper simplifies building dynamic, server-side DataTable responses in Laravel.  

@@ -12,7 +12,7 @@ class InstallCommand extends Command
     public function handle()
     {
         $this->info('Installing package dependencies via Composer...');
-        $this->runShellCommand('composer require @inertiajs/inertia-laravel');
+        $this->runShellCommand('composer require @inertiajs/inertia-laravel laravel/wayfinder laravel/fortify');
 
         $this->info('Installing frontend npm dependencies...');
         $this->runShellCommand(
