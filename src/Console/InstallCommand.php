@@ -15,9 +15,9 @@ class InstallCommand extends Command
         $this->runShellCommand('composer require @inertiajs/inertia-laravel laravel/wayfinder laravel/fortify');
 
         $this->info('Installing frontend npm dependencies...');
-        $this->runShellCommand(
-            'npm install typescript react react-dom @types/react @types/react-dom @inertiajs/react tailwind-merge clsx tailwindcss @tailwindcss/vite tailwindcss-animate lucide-react @vitejs/plugin-react'
-        );
+        // $this->runShellCommand(
+        //     'npm install typescript react react-dom @types/react @types/react-dom @inertiajs/react tailwind-merge clsx tailwindcss @tailwindcss/vite tailwindcss-animate lucide-react @vitejs/plugin-react'
+        // );
         
         $this->info('Installing labkito frontend assets...');
         // $this->runShellCommand('npm install your-custom-package');
