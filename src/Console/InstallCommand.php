@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class InstallCommand extends Command
 {
-    protected $signature = 'labkito-helper:install';
+    protected $signature = 'labkito:install';
     protected $description = 'Install package, Inertia dependencies, and custom frontend assets';
 
     public function handle()
@@ -26,6 +26,7 @@ class InstallCommand extends Command
         // $this->runShellCommand('npm install your-custom-package');
 
         $this->info('Publishing package assets...');
+        $this->runShellCommand('rm -rf ' . base_path() . '/resources/js');
         $this->call('vendor:publish', ['--tag' => 'labkito-frontend']);
 
         $this->info('Installation complete!');
